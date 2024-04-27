@@ -1,0 +1,41 @@
+{
+  "name": "welcometoreact",
+  "version": "1.0.0",
+  "description": "This is Deep Knowledge of React By Aryan Sachan",
+  
+  "scripts": {
+    "test": "jest"
+   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aryan1234-coder/Deep-Knowledge-Of--React.git"
+  },
+  "keywords": [
+    "React",
+    "Aryan",
+    "Sachan",
+    "Deep",
+    "Knowledge",
+    "of",
+    "React"
+  ],
+  "author": "Aryan Sachan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aryan1234-coder/Deep-Knowledge-Of--React/issues"
+  },
+  "homepage": "https://github.com/aryan1234-coder/Deep-Knowledge-Of--React#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+
+  "browserslist":[
+    "last 2 Chrome versions"
+  ]
+}
