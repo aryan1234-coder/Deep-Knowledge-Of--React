@@ -4,7 +4,11 @@
   "description": "This is Deep Knowledge of React By Aryan Sachan",
   
   "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    
     "test": "jest"
+
    
   },
   "repository": {
