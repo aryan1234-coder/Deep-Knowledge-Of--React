@@ -136,6 +136,73 @@ in swiggy we see differnt card in different cities
 controlling UI according your data
 
 
+# JSX 
+// const jsxHeading=(<h1 className="head" 
+// tabIndex="5 delievery time" >Namaste React using JSX</h1>);
+// const root=ReactDOM.createRoot(document.getElementById("root"));
+// root.render(jsxHeading);
+
+/// const Title=()=>(
+//     <h1 className="head">
+//         Title Component
+//     </h1>
+// )
+
+// const number=1000;
+
+// const HeadingComponent=()=>(
+//     <div id="container">
+//         {Title()}
+//         {/* this is aslo written i */}
+//         {number}
+//      <h1 className="heading">Aryan Sachan Sachan</h1>
+//     </div>
+// )
+
+# Export
+
+Default Export 
+
+export default Component
+import Component from "path
+Name Export 
+--to export multiple things in a file we used this
+export const Component
+import {Component} from path;
+
+# React Hook
+
+like a features of all the top rated restaurant like a button ,clickHandlers
+
+A hook is also normal javascript function thaat function have some logics written
+Written by Facebook Developer
+two important hooks are:
+-useState()--generate supepowerful state variable
+it maintains state of the component
+it is just a normal javascript variablw
+ const[listOfRestaurant]=useState([])
+ where you can modify that
+-useEffect()
+
+# DOM Manipulation (Importaant) React Fibre 
+
+When there is changes in UI called Reconciliation
+
+if the data changes my UI changes
+efficient DOM Manipulation
+Vitual DOM
+WhenEver a state variable update React re render the component
+
+React uses Reconcialitiation Algorithm known as React Fibre
+How it Works?
+
+Suppose it is res container and it has 15 restaurant card suppose my UI changes on filtering on !5 cards to 7 filtered cards?
+now React do?
+React to ---Virtual DOM is reprensentation of actual DOM(<div>)
+also VD is normal Javascript function
+Diff Algorithm-- it finds out the difference between Updated Virtual DOM and actual Virtual DOm
+
+
 
 
 
