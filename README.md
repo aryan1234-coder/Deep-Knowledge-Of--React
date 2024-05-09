@@ -202,6 +202,84 @@ React to ---Virtual DOM is reprensentation of actual DOM(<div>)
 also VD is normal Javascript function
 Diff Algorithm-- it finds out the difference between Updated Virtual DOM and actual Virtual DOm
 
+# Monoloithic Architecture 
+everything inside the same packaage 
+like API written
+UI
+Authentication
+Database
+SMS sending
+backend written
+
+if i want to change single element like so We have render all the inside the package
+
+# Microservice Architecture
+
+separate Backaend
+separaate UI
+separate Authentication
+everything is separate
+
+known as Separation of Concern
+
+Ui sevice need sto talk to everyone all the services talk to each other
+
+# Two Aproaches
+1 As the page load We call an API as the data comes from API then it render the page
+
+Loads-->API-->Render
+
+2. As the page load then we render the page what we have then we call an API and get the data and then render the page
+
+Loads-->render-API-->Render
+(Atleast we can seet the page in this second approach)
+
+Overall we used the second approach
+
+# Use Effect
+
+two arguements function
+useEffect(()=>{
+
+},[])
+first one is callback function and the second one is 
+dependecies
+
+whatever we called in callback function it is rendered after the Body Components
+
+# Optional Chaining
+
+Optional chaining is a feature in React (and in JavaScript in general) that allows you to access properties of an object without worrying if the object itself is null or undefined. It's denoted by the question mark (?) placed before the dot (.) when accessing properties.
+
+Here's a basic example to illustrate its usage:
+
+javascript
+Copy code
+// Consider a nested object like this
+const user = {
+  name: "John",
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    // No zip property
+  }
+};
+
+// Without optional chaining
+const zipCode = user.address.zip; // This would throw an error since address is defined but zip is not
+
+// With optional chaining
+
+# Shimmer UI
+its called fake UI when you load something and it takes time and show some fake cards
+
+# Why Normal javscript normal variable not work in changing state??
+
+
+beacause it didn't refresh the header component
+Whenever we  changes th local state variable React re render the components
+
+
 
 
 
