@@ -3,6 +3,7 @@ import RestaurantCard from "./RestaurantCard";
 // import resObj from "../utils/mockdata";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 
     
@@ -69,7 +70,8 @@ const Body=()=>{
             <div className="res-container">
                 {
 
-                    filteredRestaurant.map((restaurant)=> (<RestaurantCard key={restaurant.info.id} resData={restaurant}/>))
+                    filteredRestaurant.map((restaurant)=> (
+                    <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}><RestaurantCard  resData={restaurant}/></Link>))
                 }
                 
                 {/* here ther is a lot of restaurant if you want to show the card of kFC and other things how will 

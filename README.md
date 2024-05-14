@@ -279,6 +279,76 @@ its called fake UI when you load something and it takes time and show some fake 
 beacause it didn't refresh the header component
 Whenever we  changes th local state variable React re render the components
 
+# UseEffect
+
+
+    //if there is no dependency array in useEffect =>use Effect is called everytime when component is rendered
+      // if dependency array is empty =[]=useEffect is called on initial rendered
+      //if dependency array is [btnNameReact]=> useEffect is called everytime btnName is updated
+
+# 2 types of Routing
+
+Client Side Routing :
+
+We are not making any network call
+
+
+Server Side Routing:
+
+to make a network call and html page is coming from server
+
+# Class Based Component:
+
+import React from "react"
+
+class UserClass extends React.Component{
+
+    render(){
+        return(
+
+        )
+    }
+}
+class based component is normal javascript class which has render function that will return some piece of JSX
+
+# ComponentDidMount
+
+to call an api Class based component
+
+# ComponentDidUpdate (Important )
+
+Here the main things comes 
+In Function bAse Component
+Like in UseEffect we write like this
+useEffect(()=>{
+
+},[count])
+
+now useffect will called everytime when count updated
+
+Now The same things We have to write in Class Based Component is
+
+ComponentDidUpdate(prevProps,prevState){
+    if(this.state.count!=prevstate.count){
+
+    }
+    else{
+
+    }
+}
+
+We have to write this for every update in Class BAsed that why it is harder to write it is
+when new data show in API
+
+# ComponentWillUnMount 
+
+When you go back from the recent web page
+
+
+
+
+
+
 
 
 
