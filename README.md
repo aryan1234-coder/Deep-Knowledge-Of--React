@@ -340,9 +340,79 @@ ComponentDidUpdate(prevProps,prevState){
 We have to write this for every update in Class BAsed that why it is harder to write it is
 when new data show in API
 
+# Command Git
+git add .
+git commit -m "nnn"
+git push
+
+
 # ComponentWillUnMount 
 
+
 When you go back from the recent web page
+
+# Custom Hook
+define your own hook for readibi;ity reusability and testability of code
+
+# Chunking,Code Splitting, Dynamic Bundling,Lazy Loading ,On demanding Load,Dynamically Import 
+
+whenever there is demand of loading the page then it is loading otherwise it is not loading
+
+these above words are same 
+their work is to split down your code into smaller chunks
+
+# Higher Order Component
+Higher Order component is component which takes an component and enhance that component and return that
+(..promoted swiggy)
+
+
+# Controlled and Uncontrolled Component 
+
+# Props Drilling
+
+When you pass date from one component into another using 2-3 component then it is called Props Drilling
+
+to avoid this prop drilling We will use Context API
+
+# Context API
+createContext
+useContext
+
+# Redux ToolKit
+
+-Install @reduxjs/toolkit
+-react-redux
+
+-build our store
+-connect our store to our app
+-create a slic cart slice
+-dispatch an action
+-selector
+
+# Testing
+-Unit Testing(one unit of code or 1 specifice component like Header we test)
+-Integration Testing (there are multiple components are tested like Search bar in our app)
+-End to End testing e2e  (whatever user will do from start to end)
+
+React Test Library is used to write test cases in React
+in create react-app when we used then it is automatically React Test Library is installed in it
+in this we have to integrated Reacr Test Library
+ We used Jest in our React Test Library
+ Jest is testing library 
+ We need both jest and React Test Library
+
+
+ 1.setting up testing in our app
+ install react testing library
+ install jest
+ install babel dependency on jest website
+ configure babel
+ configure parcel  config file to disable default babel configuration
+ jest configuraation npx jest--init
+ install jsdom library in React library
+ install  @babel/preset-react -to make JSX work in test casees
+ include  @babel/preset-react inside my babel config
+ install @testing-library/jest-dom
 
 
 

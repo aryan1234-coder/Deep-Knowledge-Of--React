@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -7,6 +7,12 @@ import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Restaurantmenu from "./components/Restaurantmenu";
+import UserContext from "./utils/userContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
+import Loginpage from "./components/Loginpage";
+// import Grocery from "./components/Grocery";
 
 // You need three components:
 
@@ -942,15 +948,27 @@ const styleCard={
  
 
 
-
+const Grocery=lazy(() => import("./components/Grocery"));
 
 const AppLayout=()=>{
+
+  const[userInfo,setuserInfo]=useState();
+  useEffect(()=>{
+    const data={
+      name:"Aryan Sachan",
+    };
+    setuserInfo(data.name)
+  },[])
     return(
+      <Provider store={appStore}>
+      <UserContext.Provider value={{loggedInUser:userInfo,setuserInfo}}>
         <div className="app">
             <Header/>
             <Outlet/>
 
         </div>
+        </UserContext.Provider>
+        </Provider>
     )
 }
 const appRouter=createBrowserRouter([
@@ -975,8 +993,23 @@ const appRouter=createBrowserRouter([
     
     },
     {
+      path:"/grocery",
+      element:(
+        <Suspense fallback={<h1>Loading .....</h1>}><Grocery/></Suspense>
+    ),
+  
+  },
+    {
       path:"/restaurants/:resId",
       element: <Restaurantmenu/>
+    },
+    {
+      path:"/cart",
+      element: <Cart/>
+    },
+    {
+      path:"/login",
+      element: <Loginpage/>
     }
 
       ],
@@ -984,6 +1017,10 @@ const appRouter=createBrowserRouter([
   },
  
 ])
+
+
 const root=ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter}/>);
+
+
 
